@@ -1,7 +1,7 @@
-﻿# GridBricks â€” UK Wind Power Forecast & Day-Ahead Procurement Analytics
+# GridBricks - UK Wind Power Forecast & Day-Ahead Procurement Analytics
 
 > **UK Wholesale Electricity Day-Ahead Market Decision Support System**  
-> Tailored for Energy Utility Power Procurement Desks â€¢ Data sourced from Elexon BMRS (January 2026)
+> Tailored for Energy Utility Power Procurement Desks - Data sourced from Elexon BMRS (January 2026)
 
 ---
 
@@ -31,54 +31,54 @@ To determine how much additional conventional thermal power (e.g., CCGT gas plan
 
 ```
 GridBricks/
-â”œâ”€â”€ backend/                             # Python / FastAPI Backend Service
-â”‚   â”œâ”€â”€ app/
-â”‚   â”‚   â”œâ”€â”€ api/
-â”‚   â”‚   â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”‚   â”‚   â”œâ”€â”€ elexon.py               # Elexon BMRS API client (FUELHH & WINDFOR streams)
-â”‚   â”‚   â”‚   â””â”€â”€ routes.py               # 10 REST API endpoints (metrics, daily, profile, csv)
-â”‚   â”‚   â”œâ”€â”€ models/
-â”‚   â”‚   â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”‚   â”‚   â””â”€â”€ schemas.py              # Pydantic data models & response validation schemas
-â”‚   â”‚   â”œâ”€â”€ services/
-â”‚   â”‚   â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”‚   â”‚   â”œâ”€â”€ data_processor.py       # 30-min to 1-hour actuals aggregation & alignment
-â”‚   â”‚   â”‚   â””â”€â”€ analytics.py            # MAE, RMSE, MAPE, Bias, Skewness & Diurnal analytics
-â”‚   â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”‚   â”œâ”€â”€ config.py                   # Centralized environment configuration
-â”‚   â”‚   â””â”€â”€ main.py                     # FastAPI application entry point & CORS
-â”‚   â”œâ”€â”€ tests/
-â”‚   â”‚   â””â”€â”€ test_analytics.py           # Automated unit tests for metrics and data alignment
-â”‚   â”œâ”€â”€ Dockerfile                      # Backend container configuration
-â”‚   â”œâ”€â”€ .dockerignore
-â”‚   â”œâ”€â”€ requirements.txt                # High-performance portable dependencies
-â”‚   â””â”€â”€ .env                            # Local environment variables
-â”‚
-â”œâ”€â”€ frontend/                            # React 19 + TypeScript + Vite Frontend
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ components/
-â”‚   â”‚   â”‚   â”œâ”€â”€ Navbar.tsx              # Top announcement bar, date picker & tab navigation
-â”‚   â”‚   â”‚   â”œâ”€â”€ HeroSection.tsx         # Editorial headline, value pillars & CTA triggers
-â”‚   â”‚   â”‚   â”œâ”€â”€ StatBand.tsx            # 88px display metric band (MAE, RMSE, MAPE, Bias)
-â”‚   â”‚   â”‚   â”œâ”€â”€ ComparisonChart.tsx     # Recharts actual vs forecast dual curve & error deltas
-â”‚   â”‚   â”‚   â”œâ”€â”€ DayAheadProcurement.tsx # Commercial bidding calculator & thermal gap model
-â”‚   â”‚   â”‚   â”œâ”€â”€ AccuracyDeepDive.tsx    # Histogram distribution & diurnal 24-hr error profile
-â”‚   â”‚   â”‚   â”œâ”€â”€ DailyBreakdownTable.tsx # 31-day audited performance register
-â”‚   â”‚   â”‚   â””â”€â”€ Footer.tsx              # Elexon provenance links & technical compliance
-â”‚   â”‚   â”œâ”€â”€ api.ts                      # Typed frontend REST client
-â”‚   â”‚   â”œâ”€â”€ App.tsx                     # Main application controller & state orchestrator
-â”‚   â”‚   â”œâ”€â”€ index.css                   # Editorial Ink on Cream Paper design system
-â”‚   â”‚   â””â”€â”€ main.tsx                    # React DOM root mounting
-â”‚   â”œâ”€â”€ index.html                      # Typography preconnects (Manrope & Newsreader)
-â”‚   â”œâ”€â”€ Dockerfile                      # Multi-stage container (Node 24 build -> Nginx Alpine)
-â”‚   â”œâ”€â”€ vercel.json                     # Vercel deployment & SPA routing configuration
-â”‚   â”œâ”€â”€ package.json
-â”‚   â”œâ”€â”€ tsconfig.json
-â”‚   â””â”€â”€ vite.config.ts
-â”‚
-â”œâ”€â”€ docker-compose.yml                   # Root container orchestration for backend & frontend
-â”œâ”€â”€ .gitignore
-â””â”€â”€ README.md                            # Comprehensive product & engineering documentation
+|-- backend/                             # Python / FastAPI Backend Service
+|   |-- app/
+|   |   |-- api/
+|   |   |   |-- __init__.py
+|   |   |   |-- elexon.py               # Elexon BMRS API client (FUELHH & WINDFOR streams)
+|   |   |   \-- routes.py               # 10 REST API endpoints (metrics, daily, profile, csv)
+|   |   |-- models/
+|   |   |   |-- __init__.py
+|   |   |   \-- schemas.py              # Pydantic data models & response validation schemas
+|   |   |-- services/
+|   |   |   |-- __init__.py
+|   |   |   |-- data_processor.py       # 30-min to 1-hour actuals aggregation & alignment
+|   |   |   \-- analytics.py            # MAE, RMSE, MAPE, Bias, Skewness & Diurnal analytics
+|   |   |-- __init__.py
+|   |   |-- config.py                   # Centralized environment configuration
+|   |   \-- main.py                     # FastAPI application entry point & CORS
+|   |-- tests/
+|   |   \-- test_analytics.py           # Automated unit tests for metrics and data alignment
+|   |-- Dockerfile                      # Backend container configuration
+|   |-- .dockerignore
+|   |-- requirements.txt                # High-performance portable dependencies
+|   \-- .env                            # Local environment variables
+|
+|-- frontend/                            # React 19 + TypeScript + Vite Frontend
+|   |-- src/
+|   |   |-- components/
+|   |   |   |-- Navbar.tsx              # Top announcement bar, date picker & tab navigation
+|   |   |   |-- HeroSection.tsx         # Editorial headline, value pillars & CTA triggers
+|   |   |   |-- StatBand.tsx            # 88px display metric band (MAE, RMSE, MAPE, Bias)
+|   |   |   |-- ComparisonChart.tsx     # Recharts actual vs forecast dual curve & error deltas
+|   |   |   |-- DayAheadProcurement.tsx # Commercial bidding calculator & thermal gap model
+|   |   |   |-- AccuracyDeepDive.tsx    # Histogram distribution & diurnal 24-hr error profile
+|   |   |   |-- DailyBreakdownTable.tsx # 31-day audited performance register
+|   |   |   \-- Footer.tsx              # Elexon provenance links & technical compliance
+|   |   |-- api.ts                      # Typed frontend REST client
+|   |   |-- App.tsx                     # Main application controller & state orchestrator
+|   |   |-- index.css                   # Editorial Ink on Cream Paper design system
+|   |   \-- main.tsx                    # React DOM root mounting
+|   |-- index.html                      # Typography preconnects (Manrope & Newsreader)
+|   |-- Dockerfile                      # Multi-stage container (Node 24 build -> Nginx Alpine)
+|   |-- vercel.json                     # Vercel deployment & SPA routing configuration
+|   |-- package.json
+|   |-- tsconfig.json
+|   \-- vite.config.ts
+|
+|-- docker-compose.yml                   # Root container orchestration for backend & frontend
+|-- .gitignore
+\-- README.md                            # Comprehensive product & engineering documentation
 ```
 
 ---
