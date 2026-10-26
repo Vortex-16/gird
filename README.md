@@ -21,12 +21,9 @@ To determine how much additional conventional thermal power (e.g., CCGT gas plan
 
 ## 2. Live Demo & Video Presentation Links
 
-- **Live Web Application (Vercel)**: `https://gridbricks-analytics.vercel.app` *(or your custom deployed URL)*
-- **YouTube Video Walkthrough (Unlisted)**: `https://youtu.be/your-video-id`
-  - **Part 1 (00:00 – 04:45)**: Client Presentation & Value Pitch for Energy Utility Executive
-  - **Part 2 (04:45 – 09:30)**: Technical Architecture, SDLC & Codebase Review for Tech Lead
+- **Live Web Application (Vercel)**: `https://gridbricks.vercel.app`
 
-> **Note on AI Tools**: As requested in the project brief, AI tools (Google DeepMind Antigravity / Gemini / Claude) were actively utilized as pair-programming assistants to accelerate research of Elexon BMRS stream schemas, prototype statistical pipelines, and assist with full-lifecycle software development.
+> **Note on AI Tools**: As requested in the project brief, AI tools (Google DeepMind Antigravity) were actively utilized as programming assistants to accelerate research of Elexon BMRS stream schemas, prototype statistical pipelines, and assist with frontend development.
 
 ---
 
@@ -94,8 +91,8 @@ Ensure Docker Desktop is installed and running:
 
 ```bash
 # Clone the repository
-git clone https://github.com/anonymous/gridbricks.git
-cd gridbricks
+git clone https://github.com/Vortex-16/grid.git
+cd grid
 
 # Build and run containers
 docker-compose up --build
@@ -196,3 +193,5 @@ GridBricks calculates empirical accuracy metrics across any selected date range:
 - **Software Architecture**: Clean decoupled architecture with FastAPI async backend and React 19 frontend.
 - **SDLC Discipline**: Comprehensive requirements analysis, Elexon API streaming validation, zero-dependency data processing engine for high performance, automated unit tests, and production containerization.
 - **Design System**: "Editorial ink on cream paper" theme with `#17150e` warm black ink, `#f0f7f6` mint cream tint, 88px display numbers, and restrained `#cccc25` solar yellow accents.
+#   g i r d  
+ 
