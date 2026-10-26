@@ -96,7 +96,7 @@ export const DayAheadProcurement: React.FC<DayAheadProcurementProps> = ({ metric
 
         {/* ── Control Bar ── */}
         <div className="card-tint" style={{ padding: '24px', marginBottom: '36px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px', alignItems: 'flex-end' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '20px', alignItems: 'flex-end' }}>
             {/* Delivery Date Picker */}
             <div>
               <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '6px' }}>
@@ -158,7 +158,7 @@ export const DayAheadProcurement: React.FC<DayAheadProcurementProps> = ({ metric
         )}
 
         {/* ── Procurement KPI Highlights ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: '36px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '16px', marginBottom: '36px' }}>
           <div className="card-tint" style={{ padding: '20px' }}>
             <span className="caption">Total Expected Demand</span>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: '36px', fontWeight: 500, margin: '8px 0' }}>

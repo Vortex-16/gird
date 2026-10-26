@@ -32,11 +32,11 @@ export const StatBand: React.FC<StatBandProps> = ({ metrics, loading }) => {
           </div>
         </div>
 
-        {/* 4-Column Stat Band with 88px Display Typography */}
+        {/* 4-Column Stat Band with Responsive Typography */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          gap: '40px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
+          gap: 'clamp(24px, 4vw, 40px)',
         }}>
           {/* Column 1: MAE */}
           <div className="stat-block">

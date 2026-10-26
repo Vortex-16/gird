@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="section-dark" style={{ borderTop: 'var(--border-hairline)', paddingTop: '60px', paddingBottom: '60px' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px', marginBottom: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '40px', marginBottom: '48px' }}>
           {/* Brand & Purpose */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <ShieldCheck size={14} color="var(--color-solar-yellow)" />
-            <span>Built with AI assisted engineering across full SDLC</span>
+            <span>Elexon BMRS Verified • National Grid BSC Compliant</span>
           </div>
         </div>
       </div>

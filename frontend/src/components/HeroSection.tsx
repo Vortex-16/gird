@@ -57,8 +57,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Three Editorial Architectural Pillars (Mint Cards) */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '24px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+          gap: '20px',
         }}>
           <div className="card-tint" style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>

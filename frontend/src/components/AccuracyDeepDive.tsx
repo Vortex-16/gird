@@ -78,8 +78,8 @@ export const AccuracyDeepDive: React.FC<AccuracyDeepDiveProps> = ({ dateFrom, da
           </p>
         </div>
 
-        {/* ── Two-Column Charts Grid ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(480px, 1fr))', gap: '32px', marginBottom: '48px' }}>
+        {/* ── Two-Column Charts Grid (Responsive on Mobile) ── */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '24px', marginBottom: '48px' }}>
           {/* Chart 1: Error Distribution Histogram */}
           <div className="card-white" style={{ padding: '28px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
@@ -219,7 +219,7 @@ export const AccuracyDeepDive: React.FC<AccuracyDeepDiveProps> = ({ dateFrom, da
         </div>
 
         {/* ── Procurement Strategy Cards (Editorial Tint Cards) ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '20px' }}>
           <div className="card-tint" style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
               <AlertTriangle size={20} color="#b23b3b" />

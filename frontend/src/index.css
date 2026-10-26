@@ -333,7 +333,7 @@ body {
   padding: var(--spacing-32);
 }
 
-/* ── Stat Block (96px display number + superscript + caption) ── */
+/* ── Stat Block (Display number + unit + caption) ── */
 .stat-block {
   display: flex;
   flex-direction: column;
@@ -409,12 +409,14 @@ body {
   color: var(--color-mid-grey);
   border-bottom: var(--border-hairline);
   background-color: var(--color-gloss-white);
+  white-space: nowrap;
 }
 
 .editorial-table td {
   padding: 14px 16px;
   border-bottom: 1px solid rgba(23, 21, 14, 0.1);
   color: var(--color-gloss-black);
+  white-space: nowrap;
 }
 
 .editorial-table tr:hover td {
@@ -432,4 +434,84 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--color-mid-grey);
   border-radius: 3px;
+}
+
+/* ==========================================================================
+   Mobile & Responsive Enhancements
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .desktop-nav,
+  .desktop-controls {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --card-padding: 16px;
+    --section-gap: 48px;
+  }
+
+  .section-white,
+  .section-tint,
+  .section-dark {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .display-title {
+    font-size: clamp(34px, 9vw, 52px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  .heading-md {
+    font-size: clamp(26px, 7vw, 34px) !important;
+    line-height: 1.1 !important;
+  }
+
+  .heading-sm {
+    font-size: 20px !important;
+  }
+
+  .stat-number {
+    font-size: 56px !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  .stat-unit {
+    font-size: 20px !important;
+    margin-top: 4px !important;
+  }
+
+  .stat-caption {
+    font-size: 14px !important;
+    margin-top: 8px !important;
+  }
+
+  .stat-subcaption {
+    font-size: 12px !important;
+  }
+
+  .card-tint,
+  .card-white {
+    padding: 18px !important;
+  }
+
+  .btn-pill-dark,
+  .btn-pill-yellow,
+  .btn-pill-ghost {
+    padding: 10px 18px !important;
+    font-size: 14px !important;
+  }
 }
