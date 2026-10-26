@@ -1,0 +1,435 @@
+/* ==========================================================================
+   GridBricks — Editorial Ink on Cream Paper Design System
+   Source: Scheduling Style Reference (GlossGenius / Linear / Arc aesthetic)
+   ========================================================================== */
+
+:root {
+  /* ── Colors ── */
+  --color-gloss-black: #17150e;
+  --color-gloss-white: #f0f7f6;
+  --color-pure-white: #ffffff;
+  --color-solar-yellow: #cccc25;
+  --gradient-solar-yellow: linear-gradient(180deg, #cccc25, #cacd78);
+  --color-soft-charcoal: #272b30;
+  --color-mid-grey: #949494;
+  --color-light-coral: #ff7780;
+  --color-apricot: #ffe5d6;
+  --color-apricot-glow: #ffb36a;
+  --color-lavender-mist: #c0c8f6;
+  --color-periwinkle-fade: #9fa6ff;
+  --gradient-periwinkle-fade: linear-gradient(180deg, #9fa6ff, #b3bae8);
+
+  /* ── Surfaces ── */
+  --surface-canvas: #ffffff;
+  --surface-tint: #f0f7f6;
+  --surface-ink: #17150e;
+  --surface-highlight: #cccc25;
+
+  /* ── Typography Families ── */
+  --font-ui: 'Manrope', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Newsreader', Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* ── Typography Scale ── */
+  --text-caption: 14px;
+  --leading-caption: 1.4;
+  --tracking-caption: 0px;
+
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --tracking-body: 0px;
+
+  --text-subheading: 22px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: -0.44px;
+
+  --text-heading-sm: 32px;
+  --leading-heading-sm: 1.1;
+  --tracking-heading-sm: -0.64px;
+
+  --text-heading: 40px;
+  --leading-heading: 1.0;
+  --tracking-heading: -1.2px;
+
+  --text-heading-lg: 72px;
+  --leading-heading-lg: 0.97;
+  --tracking-heading-lg: -2.16px;
+
+  --text-display: 96px;
+  --leading-display: 0.95;
+  --tracking-display: -2.88px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* ── Spacing ── */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-44: 44px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-120: 120px;
+
+  /* ── Layout & Radii ── */
+  --page-max-width: 1240px;
+  --section-gap: 80px;
+  --card-padding: 24px;
+
+  --radius-cards: 8px;
+  --radius-badges: 8px;
+  --radius-inputs: 12px;
+  --radius-buttons: 1440px;
+  --radius-containers: 24px;
+  --radius-largecards: 16px;
+
+  /* ── Borders (1.5px Hairline is signature) ── */
+  --border-hairline: 1.5px solid var(--color-gloss-black);
+  --border-muted: 1.5px solid rgba(23, 21, 14, 0.15);
+}
+
+/* ── Reset & Document Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-ui);
+  color: var(--color-gloss-black);
+  background-color: var(--color-pure-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  line-height: var(--leading-body);
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-medium);
+  overflow-x: hidden;
+}
+
+/* ── Typography Utility Classes ── */
+.display-title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: 400;
+  color: var(--color-gloss-black);
+}
+
+.heading-lg {
+  font-family: var(--font-ui);
+  font-size: var(--text-heading-lg);
+  line-height: var(--leading-heading-lg);
+  letter-spacing: var(--tracking-heading-lg);
+  font-weight: 500;
+  color: var(--color-gloss-black);
+}
+
+.heading-md {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  font-weight: 400;
+  color: var(--color-gloss-black);
+}
+
+.heading-sm {
+  font-family: var(--font-ui);
+  font-size: var(--text-heading-sm);
+  line-height: var(--leading-heading-sm);
+  letter-spacing: var(--tracking-heading-sm);
+  font-weight: 500;
+  color: var(--color-gloss-black);
+}
+
+.subheading {
+  font-family: var(--font-ui);
+  font-size: var(--text-subheading);
+  line-height: var(--leading-subheading);
+  letter-spacing: var(--tracking-subheading);
+  font-weight: 500;
+}
+
+.caption {
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  color: var(--color-mid-grey);
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-24);
+  padding-right: var(--spacing-24);
+}
+
+/* ── Alternating Editorial Sections ── */
+.section-white {
+  background-color: var(--color-pure-white);
+  padding-top: var(--spacing-80);
+  padding-bottom: var(--spacing-80);
+}
+
+.section-tint {
+  background-color: var(--color-gloss-white);
+  padding-top: var(--spacing-80);
+  padding-bottom: var(--spacing-80);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.section-dark {
+  background-color: var(--color-gloss-black);
+  color: var(--color-gloss-white);
+  padding-top: var(--spacing-80);
+  padding-bottom: var(--spacing-80);
+}
+
+/* ── Buttons (1440px full-pill, 1.5px lines, no shadows) ── */
+.btn-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  background-color: var(--color-gloss-black);
+  color: var(--color-gloss-white);
+  border-radius: var(--radius-buttons);
+  padding: 12px 24px;
+  font-size: var(--text-body);
+  font-weight: 500;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid var(--color-gloss-black);
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.btn-pill-dark:hover {
+  background-color: var(--color-soft-charcoal);
+}
+
+.btn-pill-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  background-color: var(--color-solar-yellow);
+  color: var(--color-gloss-black);
+  border-radius: var(--radius-buttons);
+  padding: 12px 24px;
+  font-size: var(--text-body);
+  font-weight: 500;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid var(--color-gloss-black);
+  transition: transform 0.15s ease, background-color 0.18s ease;
+}
+
+.btn-pill-yellow:hover {
+  background-color: #d8d832;
+  transform: translateY(-1px);
+}
+
+.btn-pill-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  background-color: transparent;
+  color: var(--color-gloss-black);
+  border-radius: var(--radius-buttons);
+  padding: 12px 24px;
+  font-size: var(--text-body);
+  font-weight: 500;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  cursor: pointer;
+  border: var(--border-hairline);
+  transition: background-color 0.18s ease;
+}
+
+.btn-pill-ghost:hover {
+  background-color: rgba(23, 21, 14, 0.05);
+}
+
+/* ── Badges & Chips ── */
+.badge-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  background-color: transparent;
+  border: var(--border-hairline);
+  color: var(--color-gloss-black);
+  border-radius: var(--radius-badges);
+  padding: 6px 12px;
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.063em;
+  text-transform: uppercase;
+}
+
+.badge-filled {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  background-color: var(--color-gloss-white);
+  border: 1.5px solid rgba(23, 21, 14, 0.15);
+  color: var(--color-gloss-black);
+  border-radius: var(--radius-badges);
+  padding: 6px 12px;
+  font-size: var(--text-caption);
+  font-weight: 500;
+}
+
+.metric-chip-yellow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  background-color: var(--color-solar-yellow);
+  color: var(--color-gloss-black);
+  border-radius: var(--radius-badges);
+  padding: 4px 10px;
+  font-size: var(--text-caption);
+  font-weight: 600;
+  border: 1px solid rgba(23, 21, 14, 0.2);
+}
+
+/* ── Cards (Flat 8px radius, no shadow, hairline borders) ── */
+.card-tint {
+  background-color: var(--color-gloss-white);
+  border-radius: var(--radius-cards);
+  border: var(--border-hairline);
+  padding: var(--card-padding);
+}
+
+.card-white {
+  background-color: var(--color-pure-white);
+  border-radius: var(--radius-cards);
+  border: var(--border-hairline);
+  padding: var(--card-padding);
+}
+
+.card-dark {
+  background-color: var(--color-gloss-black);
+  color: var(--color-gloss-white);
+  border-radius: var(--radius-largecards);
+  padding: var(--spacing-32);
+}
+
+/* ── Stat Block (96px display number + superscript + caption) ── */
+.stat-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 88px;
+  line-height: 0.95;
+  letter-spacing: -2.88px;
+  font-weight: 400;
+  color: var(--color-gloss-black);
+  display: flex;
+  align-items: flex-start;
+}
+
+.stat-unit {
+  font-family: var(--font-ui);
+  font-size: 28px;
+  margin-top: 8px;
+  margin-left: 4px;
+  color: var(--color-solar-yellow);
+  font-weight: 600;
+}
+
+.stat-caption {
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--color-gloss-black);
+  margin-top: var(--spacing-12);
+  line-height: 1.3;
+}
+
+.stat-subcaption {
+  font-size: var(--text-caption);
+  color: var(--color-mid-grey);
+  margin-top: var(--spacing-4);
+}
+
+/* ── Input controls (Editorial styling) ── */
+.input-editorial {
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  color: var(--color-gloss-black);
+  background-color: var(--color-pure-white);
+  border: var(--border-hairline);
+  border-radius: var(--radius-inputs);
+  padding: 10px 16px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input-editorial:focus {
+  border-color: var(--color-solar-yellow);
+  box-shadow: 0 0 0 2px rgba(204, 204, 37, 0.3);
+}
+
+/* ── Table Styling ── */
+.editorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 14px;
+}
+
+.editorial-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-mid-grey);
+  border-bottom: var(--border-hairline);
+  background-color: var(--color-gloss-white);
+}
+
+.editorial-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(23, 21, 14, 0.1);
+  color: var(--color-gloss-black);
+}
+
+.editorial-table tr:hover td {
+  background-color: rgba(240, 247, 246, 0.5);
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-gloss-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-mid-grey);
+  border-radius: 3px;
+}
