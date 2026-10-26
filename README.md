@@ -19,9 +19,11 @@ To determine how much additional conventional thermal power (e.g., CCGT gas plan
 
 ---
 
-## 2. Live Demo & Video Presentation Links
+## 2. Live Demo & Deployed Services
 
-- **Live Web Application (Vercel)**: `https://grid.vercel.app`
+- **Live Web Application (Vercel)**: [https://grid-sigma-sandy.vercel.app](https://grid-sigma-sandy.vercel.app/)
+- **Live Backend API (Render)**: [https://gird.onrender.com](https://gird.onrender.com/) (API Docs at [/docs](https://gird.onrender.com/docs))
+- **YouTube Video Walkthrough (Unlisted)**: `https://youtu.be/your-video-id` *(Add your link here)*
 
 > **Note on AI Tools**: As requested in the project brief, AI tools (Google DeepMind Antigravity) were actively utilized as programming assistants to accelerate research of Elexon BMRS stream schemas, prototype statistical pipelines, and assist with frontend development.
 
