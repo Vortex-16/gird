@@ -21,7 +21,7 @@ To determine how much additional conventional thermal power (e.g., CCGT gas plan
 
 ## 2. Live Demo & Video Presentation Links
 
-- **Live Web Application (Vercel)**: `https://gridbricks.vercel.app`
+- **Live Web Application (Vercel)**: `https://grid.vercel.app`
 
 > **Note on AI Tools**: As requested in the project brief, AI tools (Google DeepMind Antigravity) were actively utilized as programming assistants to accelerate research of Elexon BMRS stream schemas, prototype statistical pipelines, and assist with frontend development.
 
@@ -193,5 +193,7 @@ GridBricks calculates empirical accuracy metrics across any selected date range:
 - **Software Architecture**: Clean decoupled architecture with FastAPI async backend and React 19 frontend.
 - **SDLC Discipline**: Comprehensive requirements analysis, Elexon API streaming validation, zero-dependency data processing engine for high performance, automated unit tests, and production containerization.
 - **Design System**: "Editorial ink on cream paper" theme with `#17150e` warm black ink, `#f0f7f6` mint cream tint, 88px display numbers, and restrained `#cccc25` solar yellow accents.
-#   g i r d  
+#   g i r d 
+ 
+ #   g i r d  
  
